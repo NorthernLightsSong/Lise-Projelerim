@@ -1,0 +1,83 @@
+body {
+    background: #000000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 15px;
+    border-radius: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#film-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.film-card {
+    color: coral;
+    border-radius: 15px;
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#film-detail {
+    color: aqua;
+    display: none;
+    margin-top: 20px;
+}
+
+#film-detail img {
+    max-width: 100%;
+}
+
+#close-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 400p; /* Nokta genişliği */
+    height: 400px; /* Nokta yüksekliği */
+    background: transparent; /* Noktanın arka plan rengini şeffaf yapar */
+    border: 2px solid transparent; /* Noktanın kenar çizgisini ekler ve rengini şeffaf yapar */
+    border-radius: 15px; /* Noktanın köşelerini yuvarlar, noktayı bir daire yapar */
+    margin: 0 5px; /* Noktalar arasındaki boşluğu ayarlar */
+    animation: changeColor 1s linear infinite; /* Noktaların renk değişim animasyonunu ekler */
+}
+
+@keyframes changeColor {
+    0% {
+        border-color: red; /* Noktanın kenar çizgisi rengini kırmızı yapar */
+    }
+    25% {
+        border-color: blue; /* Noktanın kenar çizgisi rengini mavi yapar */
+    }
+    50% {
+        border-color: green; /* Noktanın kenar çizgisi rengini yeşil yapar */
+    }
+    75% {
+        border-color: yellow; /* Noktanın kenar çizgisi rengini sarı yapar */
+    }
+    100% {
+        border-color: red; /* Noktanın kenar çizgisi rengini kırmızı yapar */
+    }
+}

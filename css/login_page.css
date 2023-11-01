@@ -1,0 +1,72 @@
+body {
+    margin: 0; /* Sayfa kenar boşluklarını sıfırlar */
+    padding: 0; /* Sayfa içerisindeki boşlukları sıfırlar */
+    display: flex; /* Sayfa içeriğini bir konteynır içinde esnek bir düzen oluşturmak için kullanır */
+    justify-content: center; /* İçeriği yatayda merkezler */
+    align-items: center; /* İçeriği dikeyde merkezler */
+    min-height: 100vh; /* Minimum yükseklik 100 viewport yüksekliği yapar, sayfa boyunu kaplar */
+    background: rgb(22, 22, 22); /* Sayfa arka plan rengi */
+}
+
+.login-container {
+    text-align: center; /* İçerik metnini ortalar */
+    color: white; /* Yazı rengi beyaz yapar */
+    border-radius: 10px; /* Köşeleri yuvarlar, kutuyu oval yapar */
+    padding: 50px; /* İçerik ile kenarlar arasına boşluk ekler */
+    display: flex; /* İçeriği bir konteynır içinde esnek bir düzen oluşturmak için kullanır */
+    flex-direction: column; /* İçerik dikey olarak hizalanacak */
+    align-items: center; /* İçerik yatayda merkezlenecek */
+}
+
+input {
+    width: 100%; /* İnput alanını tam genişlik yapar */
+    padding: 10px; /* İnput alanındaki içeriği yatayda ve dikeyde boşluklandırır */
+    margin: 10px 0; /* İnput alanının üst ve altındaki boşlukları ayarlar */
+    border: none; /* İnput alanına kenar çizgisi eklenmez */
+    border-radius: 10px; /* Köşeleri yuvarlar, kutuyu oval yapar */
+    background: white; /* İnput alanının arka plan rengini beyaz yapar */
+    color: black; /* E-posta ve şifre metin rengi */
+}
+
+button {
+    padding: 10px 10px; /* Buton içeriğini yatayda ve dikeyde boşluklandırır */
+    background: transparent; /* Butonun arka plan rengini şeffaf yapar */
+    border: 2px solid white; /* Butonun kenar çizgisi ekler ve rengini beyaz yapar */
+    color: white; /* Buton metin rengini beyaz yapar */
+    cursor: pointer; /* Fare imlecini el simgesi yapar, tıklanabilir olduğunu gösterir */
+    transition: background 0.5s; /* Arka plan renginin değişimini yumuşak hale getirir */
+    border-radius: 10px; /* Köşeleri yuvarlar, kutuyu oval yapar */
+}
+
+button:hover {
+    background: white; /* Butonun arka plan rengini beyaza döndürür */
+    color: black; /* Buton metin rengini siyah yapar */
+}
+
+.dot {
+    width: 400p; /* Nokta genişliği */
+    height: 400px; /* Nokta yüksekliği */
+    background: transparent; /* Noktanın arka plan rengini şeffaf yapar */
+    border: 2px solid transparent; /* Noktanın kenar çizgisini ekler ve rengini şeffaf yapar */
+    border-radius: 15px; /* Noktanın köşelerini yuvarlar, noktayı bir daire yapar */
+    margin: 0 5px; /* Noktalar arasındaki boşluğu ayarlar */
+    animation: changeColor 1s linear infinite; /* Noktaların renk değişim animasyonunu ekler */
+}
+
+@keyframes changeColor {
+    0% {
+        border-color: red; /* Noktanın kenar çizgisi rengini kırmızı yapar */
+    }
+    25% {
+        border-color: blue; /* Noktanın kenar çizgisi rengini mavi yapar */
+    }
+    50% {
+        border-color: green; /* Noktanın kenar çizgisi rengini yeşil yapar */
+    }
+    75% {
+        border-color: yellow; /* Noktanın kenar çizgisi rengini sarı yapar */
+    }
+    100% {
+        border-color: red; /* Noktanın kenar çizgisi rengini kırmızı yapar */
+    }
+}
